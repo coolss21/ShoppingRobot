@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Excel Data Display</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            padding-top: 50px;
+            background-color: #f8f9fa;
+            font-size: 0.875rem;  /* Reduced font size */
+        }
+        .container {
+            max-width: 1000px;  /* Reduced max-width for a more compact look */
+        }
+        h1, .display-4 {
+            font-size: 1.5rem;  /* Reduced heading size */
+        }
+        .navbar-brand {
+            font-size: 1.25rem;  /* Reduced navbar brand size */
+        }
+        .jumbotron {
+            padding: 1rem 1rem;  /* Reduced padding for jumbotron */
+            margin-bottom: 1rem;  /* Reduced margin-bottom for jumbotron */
+        }
+        .table-responsive {
+            max-height: 300px;  /* Fixed height for scrollable table */
+            overflow-y: auto;
+            margin-bottom: 1.5rem;  /* Reduced margin-bottom for table-responsive */
+        }
+        footer {
+            font-size: 0.75rem;  /* Reduced footer font size */
+            padding: 0.5rem 0;  /* Reduced padding for footer */
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Shopping Robot</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="jumbotron mt-5">
+            <h1 class="display-4">Shopping Robot</h1>
+            <p class="lead">This webpage displays the best picks of your searched product from Amazon and Flipkart</p>
+        </div>
+
+        <h1 class="mt-4">Amazon Searches Result</h1>
+        <div class="table-responsive">
+            {{ amazon_data|safe }}
+        </div>
+
+        <h1 class="mt-4">Flipkart Searches Result</h1>
+        <div class="table-responsive">
+            {{ flipkart_data|safe }}
+        </div>
+    </div>
+
+    <footer class="footer mt-auto py-3 bg-dark">
+        <div class="container">
+            <span class="text-muted">Excel Data Display &copy; 2024</span>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
