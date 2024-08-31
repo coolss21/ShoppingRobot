@@ -1,2 +1,10 @@
-hi
-  
+ --------------Steps to run the Shopping Robot:----------------
+1.Install Ui path studio and set up studio using this link for reference
+
+
+2.Install python if not present and add to path
+
+3.Then open command prompt and install flask pandas and openpyxl modules if not already installed(for eg pip install pandas, pip install openpyxl)
+
+4.place the folder named Shopping Robot in your C: Drive
+and then open file Main.xaml and run the build
